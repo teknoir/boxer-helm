@@ -2,6 +2,8 @@ triton:
   models:
     - name: rtdetr
       image:  us-docker.pkg.dev/teknoir/gcr.io/rtdetr-triton:latest
+    - name: up_down_classifier
+      image:  us-docker.pkg.dev/teknoir/gcr.io/up-down-classifier-triton:latest
 
 nvr:
   defaults:
@@ -12,4 +14,8 @@ nvr:
       config: |
         [property]
         enable=0
+        config-width=1920
+        config-height=1080
+        osd-mode=0
+        display-font-size=25
   instances: []
