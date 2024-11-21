@@ -31,82 +31,21 @@ nvr:
           config-height=1080
           osd-mode=2
           display-font-size=25
-
-          [line-crossing-stream-0]
-          enable=1
-          line-crossing-Entry-0=59;591;153;557;200;688;106;426
-          line-crossing-Exit-0=247;523;153;557;106;426;200;688
-          line-crossing-Entry-1=1607;566;1508;550;1568;183;1448;917
-          line-crossing-Exit-1=1410;534;1508;550;1448;917;1568;183
     - name: teknoir-nvr-2x3090-se-vid1
       camera:
         uri: rtsp://rtsp-video-file-streams:8554/vid1
-      nvdsanalytics:
-        enabled: true
-        config: |
-          [property]
-          enable=1
-          config-width=1920
-          config-height=1080
-          osd-mode=2
-          display-font-size=25
     - name: teknoir-nvr-2x3090-se-vid2
       camera:
         uri: rtsp://rtsp-video-file-streams:8554/vid2
-      nvdsanalytics:
-        enabled: true
-        config: |
-          [property]
-          enable=1
-          config-width=1920
-          config-height=1080
-          osd-mode=2
-          display-font-size=25
     - name: teknoir-nvr-2x3090-se-vid3
       camera:
         uri: rtsp://rtsp-video-file-streams:8554/vid3
-      nvdsanalytics:
-        enabled: true
-        config: |
-          [property]
-          enable=1
-          config-width=1920
-          config-height=1080
-          osd-mode=2
-          display-font-size=25
     - name: teknoir-nvr-2x3090-se-vid4
       camera:
         uri: rtsp://rtsp-video-file-streams:8554/vid4
-      nvdsanalytics:
-        enabled: true
-        config: |
-          [property]
-          enable=1
-          config-width=1920
-          config-height=1080
-          osd-mode=2
-          display-font-size=25
     - name: teknoir-nvr-2x3090-se-vid5
       camera:
         uri: rtsp://rtsp-video-file-streams:8554/vid5
-      nvdsanalytics:
-        enabled: true
-        config: |
-          [property]
-          enable=1
-          config-width=1920
-          config-height=1080
-          osd-mode=2
-          display-font-size=25
     - name: teknoir-nvr-2x3090-se-vid6
       camera:
         uri: rtsp://rtsp-video-file-streams:8554/vid6
-      nvdsanalytics:
-        enabled: true
-        config: |
-          [property]
-          enable=1
-          config-width=1920
-          config-height=1080
-          osd-mode=2
-          display-font-size=25
