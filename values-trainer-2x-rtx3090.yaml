@@ -49,3 +49,32 @@ nvr:
     - name: teknoir-nvr-2x3090-se-vid6
       camera:
         uri: rtsp://rtsp-video-file-streams:8554/vid6
+
+observatory-pipeline:
+  defaults:
+    debugLevel: DEBUG
+    labels:
+      deviceID: "trainer-2x-rtx3090"
+      teamspace: "teknoir-ai"
+      domain: "teknoir.cloud"
+
+  streams:
+    - stream: update-frame-rate-control
+      mqtt:
+        topicDetections: "camera/frames/#"
+    - stream: record-detections
+      mqtt:
+        topicDetections: "camera/frames/#"
+    - stream: update-movements
+    - stream: filter-movements
+    # ALERTS
+    - stream: motion
+    - stream: loitering
+    - stream: person-down
+    - stream: catalytic-theft
+    # ALERT PROCESSING
+    - stream: update-alerts
+    - stream: make-clip
+      video:
+        mountSegmentPath: true
+        mountClipTempPath: true
