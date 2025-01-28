@@ -3,6 +3,29 @@ entries:
   boxer:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-01-28T15:34:38.179315981Z"
+    dependencies:
+    - name: nvr
+      repository: https://teknoir.github.io/nvr-helm
+      version: 0.2.5
+    - name: triton
+      repository: https://teknoir.github.io/triton-helm
+      version: 0.1.2
+    - name: historian
+      repository: https://teknoir.github.io/historian-helm
+      version: 0.1.1
+    - name: observatory-pipeline
+      repository: https://teknoir.github.io/observatory-pipeline-helm
+      version: 0.0.8
+    description: A Helm chart for Boxer Property
+    digest: 49af8f1258d50f9053699496e5d98b9f48bd891c43949119aa5a56d707c9c0f9
+    name: boxer
+    type: application
+    urls:
+    - https://github.com/teknoir/boxer-helm/releases/download/boxer-0.3.0/boxer-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-01-28T14:28:13.413942672Z"
     dependencies:
     - name: nvr
@@ -319,4 +342,4 @@ entries:
     urls:
     - https://github.com/teknoir/boxer-helm/releases/download/boxer-0.0.2/boxer-0.0.2.tgz
     version: 0.0.2
-generated: "2025-01-28T14:28:13.414074447Z"
+generated: "2025-01-28T15:34:38.179423813Z"
