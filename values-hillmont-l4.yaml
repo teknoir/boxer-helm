@@ -162,7 +162,15 @@ observatory-pipeline:
     - stream: catalytic-theft
     # ALERT PROCESSING
     - stream: update-alerts
-    - stream: make-clip
+    - stream: transfer-file
+      image:
+        tag: dev-c3f8a7c
+      video:
+        mountSegmentPath: true
+        mountClipTempPath: true
+    - stream: prepare-file
+      image:
+        tag: dev-c3f8a7c
       video:
         mountSegmentPath: true
         mountClipTempPath: true
