@@ -10,9 +10,6 @@ spec:
   targetNamespace: default
   version: 0.4.0
   valuesContent: |-
-    historian:
-      historianApi:
-        enabled: true
     nvr:
       defaults:
         camera:
@@ -176,11 +173,12 @@ spec:
       defaults:
         labels:
           deviceID: "hillmont-l4"
+        image:
+          tag: clickhouse-20250225-113447
       streams:
         - stream: update-frame-rate-control
         - stream: record-detections
         - stream: update-movements
-        - stream: filter-movements
         # ALERTS
         #- stream: motion
         - stream: loitering
@@ -190,6 +188,9 @@ spec:
         # ALERT PROCESSING
         - stream: update-alerts
       file-transfer:
+        defaults:
+          image:
+            tag: clickhouse-20250225-113447
         streams:
           - stream: transfer-file
             video:
