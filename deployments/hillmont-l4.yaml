@@ -8,7 +8,7 @@ spec:
   repo: https://teknoir.github.io/boxer-helm
   chart: boxer
   targetNamespace: default
-  version: 0.4.0
+  version: 0.4.1
   valuesContent: |-
     nvr:
       defaults:
@@ -173,6 +173,9 @@ spec:
       defaults:
         labels:
           deviceID: "hillmont-l4"
+          namespace: "boxer-property"
+          domain: "teknoir.cloud"
+
         image:
           tag: clickhouse-20250225-113447
       streams:
@@ -189,6 +192,10 @@ spec:
         - stream: update-alerts
       file-transfer:
         defaults:
+          labels:
+            deviceID: "hillmont-l4"
+            namespace: "boxer-property"
+            domain: "teknoir.cloud"
           image:
             tag: clickhouse-20250225-113447
         streams:
