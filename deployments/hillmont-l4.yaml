@@ -208,3 +208,12 @@ spec:
             video:
               mountSegmentPath: true
               mountClipTempPath: true
+
+      keydb:
+        resources:
+          requests:
+            memory: 512Mi
+            cpu: 100m
+          limits:
+            memory: 16Gi
+            cpu: 1500m
